@@ -18,11 +18,6 @@ namespace SearchFightJARC
             }
 
             Console.WriteLine("Running Search...");
-            RequestAsync(args).GetAwaiter().GetResult();
-        }
-
-        public static async Task RequestAsync(string[] args)
-        {
             await ProcessHandler.RunProcess(args.ToList());
         }
     }
