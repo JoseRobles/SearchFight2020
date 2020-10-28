@@ -7,7 +7,7 @@ namespace Services
 {
     public class BaseService
     {
-        public HttpClient _httpClient { get; }
+        protected HttpClient _httpClient { get; }
 
         public BaseService()
         {

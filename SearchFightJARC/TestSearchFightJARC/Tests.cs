@@ -4,6 +4,7 @@ using Domain;
 using Application;
 using System.Threading.Tasks;
 using System.Collections.Generic;
+using Services;
 
 namespace TestSearchFightJARC
 {
@@ -54,6 +55,13 @@ namespace TestSearchFightJARC
         public async Task TestGeneralReport_CorrectAnswer()
         {
             Assert.IsTrue(_reportHandler.ReportResultsGeneral(await _serviceTest.GetSearchResults(null))[0].ToString() == $"Total Winner: .net");
+        }
+
+        [TestMethod]
+        public async Task TestProvider()
+        {
+            IService provider = new ProveedorX();
+            Assert.AreEqual(provider.ToString().Replace("Services.", ""),"ProvedorX");
         }
 
     }

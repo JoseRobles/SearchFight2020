@@ -24,7 +24,7 @@ namespace Application
             if (resultsByWords == null || resultsByWords.Count == 0)
                 throw new ArgumentException("There are no results");
 
-            return resultsByWords.GroupBy(results => results.Service).SelectMany(a => a.Where(b => b.ResultCount == a.Max(c => c.ResultCount))).Select(item => $"Winner in {item.Service}: {item.Word}").ToList();
+            return resultsByWords.GroupBy(results => results.Service).SelectMany(a => a.Where(b => b.ResultCount == a.Max(c => c.ResultCount)).Take(1)).Select(item => $"Winner in {item.Service}:: {item.Word}").ToList();
         }
 
         public IList<string> ReportResultsGeneral(IList<ResultsByWord> resultsByWords)

@@ -51,6 +51,7 @@
     <Compile Include="Implementations\BingService.cs" />
     <Compile Include="Implementations\GoogleService.cs" />
     <Compile Include="Contracts\IService.cs" />
+    <Compile Include="Implementations\ProveedorXService.cs" />
     <Compile Include="Models\Bing\BingResponse.cs" />
     <Compile Include="Models\Google\GoogleResponse.cs" />
     <Compile Include="Models\Google\SearchInformation.cs" />

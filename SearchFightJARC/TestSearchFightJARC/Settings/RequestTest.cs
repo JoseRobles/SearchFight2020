@@ -4,6 +4,7 @@ using Domain;
 using Application;
 using System.Threading.Tasks;
 
+
 namespace TestSearchFightJARC
 {
     public class RequestTest: IRequestHandler
